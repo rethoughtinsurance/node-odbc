@@ -4,29 +4,21 @@
   "version": "1.4.1",
   "main": "lib/odbc.js",
   "types": "./lib/odbc.d.ts",
-  "homepage": "http://github.com/wankdanker/node-odbc/",
+  "homepage": "http://github.com/rethoughtinsurance/node-odbc/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/wankdanker/node-odbc.git"
-  },
-  "bugs": {
-    "url": "https://github.com/w1nk/node-odbc/issues"
+    "url": "git://github.com/rethoughtinsurance/node-odbc.git"
   },
   "contributors": [
     {
-      "name": "Dan VerWeire",
-      "email": "dverweire@gmail.com"
-    },
-    {
-      "name": "Lee Smith",
-      "email": "notwink@gmail.com"
+      "name": "Janet Borschowa",
     }
   ],
   "directories": {
     "lib": "."
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=10.1.0"
   },
   "scripts": {
     "install": "node-gyp configure build",
@@ -34,7 +26,7 @@
   },
   "dependencies": {
     "bindings": "^1.2.1",
-    "nan": "^2.9.2"
+    "nan": "^2.10.0"
   },
   "gypfile": true
 }
