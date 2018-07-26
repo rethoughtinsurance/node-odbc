@@ -9,7 +9,7 @@
         'src/odbc_result.cpp',
         'src/dynodbc.cpp'
       ],
-      'cflags' : ['-Wall', '-Wextra', '-Wno-unused-parameter'],
+      'cflags' : ['-Wall', '-Wextra', '-Wno-unused-parameter', '-Wno-deprecated-declarations', '-Wno-gnu-designator'],
       'include_dirs': [
         "<!(node -e \"require('nan')\")"
       ],
@@ -22,7 +22,7 @@
             '-lodbc' 
           ],
           'cflags' : [
-            '-g'
+            '-g', '-Wno-deprecated-declarations', '-Wno-gnu-designator'
           ]
         }],
         [ 'OS == "mac"', {
@@ -32,7 +32,13 @@
           'libraries' : [
             '-L/usr/local/lib',
             '-lodbc' 
-          ]
+          ],
+          'cflags' : [
+             '-g', '-Wno-deprecated-declarations', '-Wno-gnu-designator'
+           ],
+           'cflags_cc' : [
+             '-g', '-Wno-deprecated-declarations', '-Wno-gnu-designator'
+           ]
         }],
         [ 'OS=="win"', {
           'sources' : [
